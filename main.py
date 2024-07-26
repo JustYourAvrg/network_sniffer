@@ -1,3 +1,6 @@
+from app.setup import Setup
+Setup.import_required_modules()
+
 import customtkinter as ctk
 import threading
 import winsound
@@ -8,7 +11,6 @@ import matplotlib.pyplot as plt
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 from scapy.all import hexdump
 from app.sniffer import SnifferClass
-from app.setup import Setup
 from app.Gui.messagebox import MessageBox
 from app.Gui.utils import get_interfaces, make_sniffer_frames, make_geolocation_labels, get_lookup_data
 
@@ -369,9 +371,6 @@ class GuiFramesAndUtility:
 
 if __name__ == "__main__":
     try:
-        # Import required modules
-        Setup.import_required_modules()
-
         # Set Variables
         FramesAndUtility = GuiFramesAndUtility(iface=get_interfaces()[0], proto_filter="None", sniffing=False, frame="Sniffer")
         Sniffer = SnifferClass()
