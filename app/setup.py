@@ -1,7 +1,7 @@
 import subprocess
 import winsound
 
-from Gui.messagebox import MessageBox
+from .Gui.messagebox import MessageBox
 
 
 class Setup:
