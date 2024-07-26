@@ -380,7 +380,6 @@ if __name__ == "__main__":
 
         # Configure root frame
         root.title('Packet Sniffer')
-        root.iconbitmap('icon.ico')
         root.geometry('1080x600')
         root.configure(fg_color='#1e1e1e')
         root.resizable(0, 0)
